@@ -1,7 +1,7 @@
 #include<iostream>
 #include<climits>
 using namespace std;
-int kedal(int [], int);
+int kadane(int [], int);
 int main(){
     int n, sum=0;
     int maxnum=INT_MIN;
@@ -12,16 +12,16 @@ int main(){
     }
     int noncir;
     int cir;
-    noncir=kedal(arr, n);
+    noncir=kadane(arr, n);
     for(int i=0; i<n; i++){
         sum+=arr[i];
         arr[i]=-arr[i];
     }
-    cir=sum - - kedal(arr, n);
+    cir=sum - - kadane(arr, n);
     maxnum=max(noncir, cir);
     cout<<"MAX: "<<maxnum;
 }
-int kedal(int arr[], int n){
+int kadane(int arr[], int n){
     int newarr[n];
     int maxnum=INT_MIN;
     if(arr[0]<0){
