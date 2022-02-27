@@ -17,7 +17,7 @@ int main(){
         sum+=arr[i];
         arr[i]=-arr[i];
     }
-    cir=sum - - kadane(arr, n); // Case 2: {4 -4 6 -6 10 -11 12} ->Ans: 22
+    cir=sum - - kadane(arr, n); // Case 2: {4 -4 6 -6 10 -11 12} ->Ans: 22 
     maxnum=max(noncir, cir);
     cout<<"MAX: "<<maxnum;
 }
