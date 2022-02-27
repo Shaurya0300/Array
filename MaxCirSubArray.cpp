@@ -12,12 +12,12 @@ int main(){
     }
     int noncir;
     int cir;
-    noncir=kadane(arr, n);
+    noncir=kadane(arr, n); // Case 1: {-1, 4, -6, 7, 5, -4} ->Ans: 12
     for(int i=0; i<n; i++){
         sum+=arr[i];
         arr[i]=-arr[i];
     }
-    cir=sum - - kadane(arr, n);
+    cir=sum - - kadane(arr, n); // Case 2: {4 -4 6 -6 10 -11 12} ->Ans: 22
     maxnum=max(noncir, cir);
     cout<<"MAX: "<<maxnum;
 }
